@@ -33,4 +33,13 @@ public class MovementController : MonoBehaviour
     {
         _rigidbody2D.linearVelocityX = _input.Horizontal * moveSpeed;
     }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.transform.CompareTag("BouncePad"))
+        {
+            print("bounced");
+            _rigidbody2D.linearVelocityY = jumpSpeed * 1.8f;
+        }
+    }
 }
