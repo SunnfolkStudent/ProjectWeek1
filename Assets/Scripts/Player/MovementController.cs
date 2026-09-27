@@ -52,6 +52,13 @@ public class MovementController : MonoBehaviour
             print("bounced");
             _rigidbody2D.linearVelocityY = jumpSpeed * 1.8f;
         }
+
+        if (other.transform.CompareTag("Enemy"))
+        {
+            health--;
+            transform.position = new Vector3(0, -2, 0);
+            healthText.text = "Lives: " + health;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
