@@ -1,6 +1,5 @@
 using UnityEngine;
 using TMPro;
-using TMPro.EditorUtilities;
 using UnityEngine.SceneManagement;
 
 public class MovementController : MonoBehaviour
@@ -22,7 +21,6 @@ public class MovementController : MonoBehaviour
     public GameObject gameOverText;
     public GameObject restartButton;
     public GameObject ReMainMenu;
-    public GameObject Background;
 
     private void Start()
     {
@@ -34,7 +32,6 @@ public class MovementController : MonoBehaviour
         gameOverText.SetActive(false);
         restartButton.SetActive(false);
         ReMainMenu.SetActive(false);
-        Background.SetActive(false);
     }
 
     private void Update()
@@ -52,7 +49,6 @@ public class MovementController : MonoBehaviour
             gameOverText.SetActive(true);
             restartButton.SetActive(true);
             ReMainMenu.SetActive(true);
-            Background.SetActive(true);
             Destroy(gameObject);
         }
 
