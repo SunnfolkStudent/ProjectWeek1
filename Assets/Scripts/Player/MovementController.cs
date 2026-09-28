@@ -111,16 +111,5 @@ public class MovementController : MonoBehaviour
                 _animator.Play("IDLE");
             }
         }
-        else
-        {
-            if (_rigidbody2D.linearVelocityY > 0)
-            {
-                _animator.Play("jump1");
-            }
-            else
-            {
-                _animator.Play("jumpFall");
-            }
-        }
     }
 }
