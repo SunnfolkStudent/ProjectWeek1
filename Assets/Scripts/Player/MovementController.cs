@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using TMPro.EditorUtilities;
 using UnityEngine.SceneManagement;
 
 public class MovementController : MonoBehaviour
@@ -17,12 +18,21 @@ public class MovementController : MonoBehaviour
     public Vector2 groundBoxSize = new Vector2(0.8f, 0.2f);
     public TextMeshProUGUI healthText;
 
+    public GameObject gameOverText;
+    public GameObject restartButton;
+    public GameObject ReMainMenu;
+    public GameObject Background;
+
     private void Start()
     {
         _input = GetComponent<InputManager>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
         health = 3;
         healthText.text = "Lives: " + health;
+        gameOverText.SetActive(false);
+        restartButton.SetActive(false);
+        ReMainMenu.SetActive(false);
+        Background.SetActive(false);
     }
 
     private void Update()
@@ -36,7 +46,10 @@ public class MovementController : MonoBehaviour
 
         if (health <= 0)
         {
-            SceneManager.LoadScene("TestingPlayer");
+            gameOverText.SetActive(true);
+            restartButton.SetActive(true);
+            ReMainMenu.SetActive(true);
+            Background.SetActive(true);
         }
     }
     
