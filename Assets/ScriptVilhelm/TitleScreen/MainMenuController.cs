@@ -6,7 +6,7 @@ public class MainMenuController : MonoBehaviour
     
     public void Gamescene()
     {
-        SceneManager.LoadScene("Scenes/TestingEnemies");
+        SceneManager.LoadScene("Scenes/Level 1");
     }
 
     public void QuitGame()

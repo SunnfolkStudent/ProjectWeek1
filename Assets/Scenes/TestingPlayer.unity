@@ -796,6 +796,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PistolShrimp
       objectReference: {fileID: 0}
+    - target: {fileID: 2218204876556742756, guid: 60eb30d9d0203eb49ad74da5affcceec, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3396049931055252478, guid: 60eb30d9d0203eb49ad74da5affcceec, type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3396049931055252478, guid: 60eb30d9d0203eb49ad74da5affcceec, type: 3}
       propertyPath: m_GravityScale
       value: 0
