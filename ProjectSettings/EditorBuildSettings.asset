@@ -9,13 +9,13 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/TestingPlayer.unity
+    path: Assets/Scenes/Testing/TestingPlayer.unity
     guid: eff893bf19ff87841a30559be5449d39
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: a07b29a01d7e5ee498b9b20dc9c67e44
   - enabled: 1
-    path: Assets/Scenes/TestingEnemies.unity
+    path: Assets/Scenes/Testing/TestingEnemies.unity
     guid: 0fa69de863bb78348833e0bd7c602e43
   - enabled: 1
     path: Assets/Scenes/Level 1.unity

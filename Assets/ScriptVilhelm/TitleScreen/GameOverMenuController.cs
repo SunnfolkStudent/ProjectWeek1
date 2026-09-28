@@ -5,7 +5,7 @@ public class GameOverMenuController : MonoBehaviour
 {
     public void Gamescene()
     {
-        SceneManager.LoadScene("Scenes/TestingPlayer");
+        SceneManager.LoadScene("Scenes/Level 1");
     }
 
     public void ReturnToMainMenu()
