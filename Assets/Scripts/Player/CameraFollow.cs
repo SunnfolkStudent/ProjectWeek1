@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
@@ -6,6 +7,6 @@ public class CameraFollow : MonoBehaviour
 
     private void LateUpdate()
     {
-        transform.position = new Vector3(0, target.position.y, -10);
+        transform.position = new Vector3(target.position.x, target.position.y, -10);
     }
 }
