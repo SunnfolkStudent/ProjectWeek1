@@ -7,11 +7,12 @@ TagManager:
   - BouncePad
   - Bullet
   - Enemy
+  - Enemie
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - Ground

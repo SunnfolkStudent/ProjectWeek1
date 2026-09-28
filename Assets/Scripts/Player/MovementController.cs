@@ -7,6 +7,7 @@ public class MovementController : MonoBehaviour
 {
     private InputManager _input;
     private Rigidbody2D _rigidbody2D;
+    private Animator _animator;
     
     public float moveSpeed;
     public float jumpSpeed;
@@ -27,6 +28,7 @@ public class MovementController : MonoBehaviour
     {
         _input = GetComponent<InputManager>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
         health = 3;
         healthText.text = "Lives: " + health;
         gameOverText.SetActive(false);
@@ -42,6 +44,7 @@ public class MovementController : MonoBehaviour
         if (_input.Jump && playerIsGrounded)
         {
             _rigidbody2D.linearVelocityY = jumpSpeed;
+            _animator.Play("jump");
         }
 
         if (health <= 0)
@@ -50,6 +53,17 @@ public class MovementController : MonoBehaviour
             restartButton.SetActive(true);
             ReMainMenu.SetActive(true);
             Background.SetActive(true);
+        }
+
+        UpdateAnimation();
+        
+        if (_input.Horizontal >= 1)
+        { 
+            transform.localScale = new Vector2(-1, 1);
+        }
+        else if (_input.Horizontal <= -1)
+        {
+            transform.localScale = new Vector2(1, 1);
         }
     }
     
@@ -69,7 +83,7 @@ public class MovementController : MonoBehaviour
         if (other.transform.CompareTag("Enemy"))
         {
             health--;
-            transform.position = new Vector3(0, -2, 0);
+            transform.position = new Vector3(0, -2, -1);
             healthText.text = "Lives: " + health;
         }
     }
@@ -79,8 +93,34 @@ public class MovementController : MonoBehaviour
         if (other.CompareTag("Bullet"))
         {
             health--;
-            transform.position = new Vector3(0, -2, 0);
+            transform.position = new Vector3(0, -2, -1);
             healthText.text = "Lives: " + health;
+        }
+    }
+
+    private void UpdateAnimation()
+    {
+        if (playerIsGrounded)
+        {
+            if (_input.Horizontal != 0)
+            {
+                _animator.Play("walk left");
+            }
+            else 
+            {
+                _animator.Play("IDLE");
+            }
+        }
+        else
+        {
+            if (_rigidbody2D.linearVelocityY > 0)
+            {
+                _animator.Play("jump1");
+            }
+            else
+            {
+                _animator.Play("jumpFall");
+            }
         }
     }
 }
