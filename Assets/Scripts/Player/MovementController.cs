@@ -53,6 +53,7 @@ public class MovementController : MonoBehaviour
             restartButton.SetActive(true);
             ReMainMenu.SetActive(true);
             Background.SetActive(true);
+            Destroy(gameObject);
         }
 
         UpdateAnimation();
@@ -83,7 +84,7 @@ public class MovementController : MonoBehaviour
         if (other.transform.CompareTag("Enemy"))
         {
             health--;
-            transform.position = new Vector3(0, -2, -1);
+            transform.position = new Vector3(0, -5.5f, -1);
             healthText.text = "Lives: " + health;
         }
     }
