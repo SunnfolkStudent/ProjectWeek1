@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -7219583670211161997}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: Bullet
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
   speed: 5
-  despawnTime: 1
+  despawnTime: 5
   _rigidbody2D: {fileID: -8005490761534907175}
 --- !u!50 &-8005490761534907175
 Rigidbody2D:
@@ -125,7 +125,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
