@@ -57,6 +57,7 @@ public class MovementController : MonoBehaviour
             {
                 hitInfo.TryGetComponent(out Rigidbody2D rb);
                 rb.bodyType = RigidbodyType2D.Kinematic;
+                rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
                 
                 heldObject = hitInfo.gameObject;
                 
@@ -68,12 +69,14 @@ public class MovementController : MonoBehaviour
         {
             // Throw Object
             heldObject.TryGetComponent(out Rigidbody2D rb);
+            rb.constraints = 0;
             rb.bodyType = RigidbodyType2D.Dynamic;
-            
+            heldObject.transform.parent = null;
             rb.linearVelocityY = throwSpeed * 1.8f;
             rb.linearVelocityX = throwSpeed * transform.localScale.x;
             
             heldObject = null;
+            
         }
         
 
