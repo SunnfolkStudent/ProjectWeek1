@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 1244871798920616150}
   - component: {fileID: 409167374660061636}
   - component: {fileID: 4592322031903094787}
+  - component: {fileID: 6320255211219758110}
   m_Layer: 0
   m_Name: Swim
   m_TagString: Enemy
@@ -207,3 +208,25 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0.4375}
   m_Radius: 0.5
+--- !u!95 &6320255211219758110
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8217420399515604236}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 8315631649691434030, guid: 5fc6363e5e263a44a97da5df55a254d3, type: 3}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

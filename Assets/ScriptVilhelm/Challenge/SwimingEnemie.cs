@@ -6,13 +6,15 @@ public class SwimingEnemie : MonoBehaviour
     
     public LayerMask whatisWall;
     public Transform wallCheck;
- 
     
     private Rigidbody2D _rigidbody2D;
+    private Animator _animator;
 
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
+        _animator.Play("swimming");
     }
     
     private void FixedUpdate()

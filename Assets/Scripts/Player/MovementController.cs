@@ -96,9 +96,13 @@ public class MovementController : MonoBehaviour
 
         if (dying == false)
         {
-            if (_input.Horizontal != 0)
+            if (_input.Horizontal >= 1)
+            { 
+                transform.localScale = new Vector2(-1, 1);
+            }
+            else if (_input.Horizontal <= -1)
             {
-                transform.localScale = new Vector2(_input.Horizontal, 1);
+                transform.localScale = new Vector2(1, 1);
             }
         }
     }
@@ -129,9 +133,7 @@ public class MovementController : MonoBehaviour
     {
         if (other.CompareTag("Bullet"))
         {
-            health--;
-            transform.position = new Vector3(0, -2, -1);
-            healthText.text = "Lives: " + health;
+            StartCoroutine(Die());
         }
     }
 
@@ -154,11 +156,11 @@ public class MovementController : MonoBehaviour
         {
             if (_rigidbody2D.linearVelocityY > 0)
             {
-                _animator.Play("jump1");
+                _animator.Play("jump up");
             }
             else
             {
-                _animator.Play("jumpFall");
+                _animator.Play("jump down");
             }
         }
     }

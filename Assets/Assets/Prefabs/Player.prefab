@@ -35,6 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4140156217078806027}
+  - {fileID: 9163379213332645916}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8316210328533562830
@@ -174,12 +175,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MovementController
   moveSpeed: 5
   jumpSpeed: 7
+  health: 0
+  dying: 0
   playerIsGrounded: 0
   groundCheck: {fileID: 0}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 0
+  whatIsPickup:
+    serializedVersion: 2
+    m_Bits: 0
   groundBoxSize: {x: 0.8, y: 0.2}
+  healthText: {fileID: 0}
+  gameOverText: {fileID: 0}
+  restartButton: {fileID: 0}
+  ReMainMenu: {fileID: 0}
+  heldObject: {fileID: 0}
+  holdPosition: {fileID: 0}
+  throwSpeed: 0
 --- !u!114 &4268689240410646087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,6 +206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InputManager
   Horizontal: 0
+  Vertical: 0
   Jump: 0
 --- !u!1 &3385711528257352879
 GameObject:
@@ -220,6 +234,37 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7085689312667897157}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3990955751139234588
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9163379213332645916}
+  m_Layer: 0
+  m_Name: HeldItem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9163379213332645916
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3990955751139234588}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
