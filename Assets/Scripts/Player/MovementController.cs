@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
@@ -17,12 +18,20 @@ public class MovementController : MonoBehaviour
     public bool playerIsGrounded;
     public Transform groundCheck;
     public LayerMask whatIsGround;
+    public LayerMask whatIsPickup;
     public Vector2 groundBoxSize = new Vector2(0.8f, 0.2f);
     public TextMeshProUGUI healthText;
 
     public GameObject gameOverText;
     public GameObject restartButton;
     public GameObject ReMainMenu;
+
+    public GameObject heldObject;
+    public Transform holdPosition;
+
+    public float throwSpeed;
+    
+    
 
     private void Start()
     {
@@ -41,10 +50,42 @@ public class MovementController : MonoBehaviour
     {
         playerIsGrounded = Physics2D.OverlapBox(groundCheck.position, groundBoxSize, 0f, whatIsGround);
         
-        if (_input.Jump && playerIsGrounded && dying == false)
+        if (heldObject == null && _input.Jump && _input.Vertical < 0)
         {
-            _rigidbody2D.linearVelocityY = jumpSpeed;
+            var hitInfo = Physics2D.OverlapCircle(transform.position, 1.5f, whatIsPickup);
+            if (hitInfo != null)
+            {
+                hitInfo.TryGetComponent(out Rigidbody2D rb);
+                rb.bodyType = RigidbodyType2D.Kinematic;
+                
+                heldObject = hitInfo.gameObject;
+                
+                heldObject.transform.position = holdPosition.position;
+                heldObject.transform.parent = transform;
+            }
         }
+        else if (heldObject != null && _input.Jump && _input.Vertical > 0)
+        {
+            // Throw Object
+            heldObject.TryGetComponent(out Rigidbody2D rb);
+            rb.bodyType = RigidbodyType2D.Dynamic;
+            
+            rb.linearVelocityY = throwSpeed * 1.8f;
+            rb.linearVelocityX = throwSpeed * transform.localScale.x;
+            
+            heldObject = null;
+        }
+        
+
+        if (_input.Vertical == 0)
+        {
+            if (_input.Jump && playerIsGrounded && dying == false)
+            {
+                _rigidbody2D.linearVelocityY = jumpSpeed;
+            }
+        }
+        
+      
 
         if (health <= 0)
         {
@@ -55,14 +96,10 @@ public class MovementController : MonoBehaviour
 
         if (dying == false)
         {
-            if (_input.Horizontal >= 1)
-            { 
-                transform.localScale = new Vector2(-1, 1);
-            }
-            else if (_input.Horizontal <= -1)
+            if (_input.Horizontal != 0)
             {
-                transform.localScale = new Vector2(1, 1);
-            }  
+                transform.localScale = new Vector2(_input.Horizontal, 1);
+            }
         }
     }
     
@@ -149,5 +186,11 @@ public class MovementController : MonoBehaviour
         restartButton.SetActive(true);
         ReMainMenu.SetActive(true);
         dying = false;
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(transform.position, 1.5f);
+        
     }
 }

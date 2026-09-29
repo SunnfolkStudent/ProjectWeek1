@@ -22,12 +22,12 @@ public class Macguffinit : MonoBehaviour
 		isMacguffinGrounded = Physics2D.OverlapBox(groundCheck.position, groundBoxSize, 0f, whatIsGround);
 		if (isMacguffinGrounded)
 		{
-			_rigidbody2D.linearVelocityY = jumpSpeed;
+			//_rigidbody2D.linearVelocityY = jumpSpeed;
 		}
 		
 	}
 
-	private void OnCollisionEnter(Collision other)
+	private void OnCollisionEnter2D(Collision2D other)
 	{
 		if (other.transform.CompareTag("BouncePad"))
 		{
