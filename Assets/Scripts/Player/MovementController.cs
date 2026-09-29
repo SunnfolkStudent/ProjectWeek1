@@ -119,7 +119,6 @@ public class MovementController : MonoBehaviour
     {
         if (other.transform.CompareTag("BouncePad"))
         {
-            print("bounced");
             _rigidbody2D.linearVelocityY = jumpSpeed * 1.8f;
         }
 
@@ -131,7 +130,11 @@ public class MovementController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Bullet"))
+        if (other.CompareTag("Bullet") && dying == false)
+        {
+            StartCoroutine(Die());
+        }
+        if (other.transform.CompareTag("Enemy") && dying == false)
         {
             StartCoroutine(Die());
         }
