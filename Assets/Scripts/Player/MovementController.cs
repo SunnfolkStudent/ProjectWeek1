@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class MovementController : MonoBehaviour
 {
@@ -11,7 +12,8 @@ public class MovementController : MonoBehaviour
     public float moveSpeed;
     public float jumpSpeed;
     public int health;
-    
+
+    public bool dying;
     public bool playerIsGrounded;
     public Transform groundCheck;
     public LayerMask whatIsGround;
@@ -32,41 +34,44 @@ public class MovementController : MonoBehaviour
         gameOverText.SetActive(false);
         restartButton.SetActive(false);
         ReMainMenu.SetActive(false);
+        dying = false;
     }
 
     private void Update()
     {
         playerIsGrounded = Physics2D.OverlapBox(groundCheck.position, groundBoxSize, 0f, whatIsGround);
         
-        if (_input.Jump && playerIsGrounded)
+        if (_input.Jump && playerIsGrounded && dying == false)
         {
             _rigidbody2D.linearVelocityY = jumpSpeed;
-            _animator.Play("jump");
         }
 
         if (health <= 0)
         {
-            gameOverText.SetActive(true);
-            restartButton.SetActive(true);
-            ReMainMenu.SetActive(true);
-            Destroy(gameObject);
+            StartCoroutine(FullyDie());
         }
 
         UpdateAnimation();
-        
-        if (_input.Horizontal >= 1)
-        { 
-            transform.localScale = new Vector2(-1, 1);
-        }
-        else if (_input.Horizontal <= -1)
+
+        if (dying == false)
         {
-            transform.localScale = new Vector2(1, 1);
+            if (_input.Horizontal >= 1)
+            { 
+                transform.localScale = new Vector2(-1, 1);
+            }
+            else if (_input.Horizontal <= -1)
+            {
+                transform.localScale = new Vector2(1, 1);
+            }  
         }
     }
     
     private void FixedUpdate()
     {
-        _rigidbody2D.linearVelocityX = _input.Horizontal * moveSpeed;
+        if (dying == false)
+        {
+            _rigidbody2D.linearVelocityX = _input.Horizontal * moveSpeed;   
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -77,11 +82,9 @@ public class MovementController : MonoBehaviour
             _rigidbody2D.linearVelocityY = jumpSpeed * 1.8f;
         }
 
-        if (other.transform.CompareTag("Enemy"))
+        if (other.transform.CompareTag("Enemy") && dying == false)
         {
-            health--;
-            transform.position = new Vector3(0, -5.5f, -1);
-            healthText.text = "Lives: " + health;
+            StartCoroutine(Die());
         }
     }
 
@@ -97,6 +100,8 @@ public class MovementController : MonoBehaviour
 
     private void UpdateAnimation()
     {
+        if (dying) return;
+        
         if (playerIsGrounded)
         {
             if (_input.Horizontal != 0)
@@ -108,5 +113,41 @@ public class MovementController : MonoBehaviour
                 _animator.Play("IDLE");
             }
         }
+        else
+        {
+            if (_rigidbody2D.linearVelocityY > 0)
+            {
+                _animator.Play("jump1");
+            }
+            else
+            {
+                _animator.Play("jumpFall");
+            }
+        }
+    }
+
+    private IEnumerator Die()
+    {
+        dying = true;
+        health--;
+        healthText.text = "Lives: " + health;
+        _animator.Play("death animation");
+        yield return new WaitForSeconds(1.75f);
+        transform.position = new Vector3(0, -5.5f, -1);
+        dying = false;
+    }
+    private IEnumerator FullyDie()
+    {
+        health--;
+        healthText.text = "Lives: " + health;
+        dying = true;
+        _animator.Play("death animation");
+        yield return new WaitForSeconds(1.75f);
+        Destroy(gameObject);
+        transform.position = new Vector3(0, -5.5f, -1);
+        gameOverText.SetActive(true);
+        restartButton.SetActive(true);
+        ReMainMenu.SetActive(true);
+        dying = false;
     }
 }
