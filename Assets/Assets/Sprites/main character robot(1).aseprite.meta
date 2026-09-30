@@ -2,7 +2,47 @@ fileFormatVersion: 2
 guid: 1c11134f977c91347b768d307a39fc96
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: IDLE
+    second: {fileID: 7400000, guid: c04a606a7790404438b6aa1ea7263faa, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: death animation
+    second: {fileID: 7400000, guid: ba08f48dbc077e04fb5816fe0e78f965, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: jump down
+    second: {fileID: 7400000, guid: 8f8cc48046afa8943bee192be505b1c8, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: jump up
+    second: {fileID: 7400000, guid: 49c894778b3de7b42a15ab10d1ebc4ef, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: standing right shoot
+    second: {fileID: 7400000, guid: d4da245ca2b463f4595926139ac5cd89, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: standing shoot left
+    second: {fileID: 7400000, guid: 61a0fa12b15e2b641aaa6e1577ea9927, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: walk left
+    second: {fileID: 7400000, guid: 9577f85910e32904a9ffb5477f8fb321, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: walk right
+    second: {fileID: 7400000, guid: af744269dcaa365409b2d1dd807ebe4d, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -103,7 +143,7 @@ ScriptedImporter:
     addShadowCasters: 0
     generateIndividualEvents: 1
     generateSpriteAtlas: 1
-  platformSettingsDirtyTick: 639263038580562563
+  platformSettingsDirtyTick: 639263764402076319
   singleSpriteImportData:
   - name: 
     originalName: 

@@ -1,14 +1,16 @@
 using System;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using Random = UnityEngine.Random;
 
 public class MovementController : MonoBehaviour
 {
     private InputManager _input;
     private Rigidbody2D _rigidbody2D;
     private Animator _animator;
+    private AudioSource _audioSource;
     
     public float moveSpeed;
     public float jumpSpeed;
@@ -26,13 +28,16 @@ public class MovementController : MonoBehaviour
 
     public float throwSpeed;
     
-    
+    public AudioClip[] jumpSounds;
+    public AudioClip[] moveSounds;
+    public AudioClip deathSound;
 
     private void Start()
     {
         _input = GetComponent<InputManager>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
+        _audioSource = GetComponent<AudioSource>();
         health = 3;
         dying = false;
     }
@@ -78,6 +83,8 @@ public class MovementController : MonoBehaviour
             if (_input.Jump && playerIsGrounded && dying == false)
             {
                 _rigidbody2D.linearVelocityY = jumpSpeed;
+                int randomSound = Random.Range(0, jumpSounds.Length);
+                _audioSource.PlayOneShot(jumpSounds[randomSound]);
             }
         }
         
@@ -169,11 +176,19 @@ public class MovementController : MonoBehaviour
             }
         }
     }
+    
+    public void WalkAudio()
+    {
+        int randomSound = Random.Range(0, moveSounds.Length);
+        _audioSource.pitch = Random.Range(0.8f, 1.2f);
+        _audioSource.PlayOneShot(moveSounds[randomSound]);
+    }
 
     private IEnumerator Die()
     {
         dying = true;
         health--;
+        _audioSource.PlayOneShot(deathSound);
         _animator.Play("death animation");
         yield return new WaitForSeconds(1.75f);
         transform.position = new Vector3(0, -5.5f, -1);

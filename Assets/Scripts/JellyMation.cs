@@ -5,10 +5,14 @@ using UnityEngine;
 public class JellyMation : MonoBehaviour
 {
     private Animator _animator;
+    private AudioSource _audioSource;
+    
+    public AudioClip sound;
 
     private void Start()
     {
         _animator = GetComponent<Animator>();
+        _audioSource = GetComponent<AudioSource>();
         _animator.Play("idle");
     }
 
@@ -17,6 +21,7 @@ public class JellyMation : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             _animator.SetTrigger("bounce");
+            _audioSource.PlayOneShot(sound);
         }
     }
 }
