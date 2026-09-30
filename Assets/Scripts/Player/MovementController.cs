@@ -20,7 +20,6 @@ public class MovementController : MonoBehaviour
     public LayerMask whatIsGround;
     public LayerMask whatIsPickup;
     public Vector2 groundBoxSize = new Vector2(0.8f, 0.2f);
-    public TextMeshProUGUI healthText;
 
     public GameObject heldObject;
     public Transform holdPosition;
@@ -35,7 +34,6 @@ public class MovementController : MonoBehaviour
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
         health = 3;
-        healthText.text = "Lives: " + health;
         dying = false;
     }
 
@@ -176,7 +174,6 @@ public class MovementController : MonoBehaviour
     {
         dying = true;
         health--;
-        healthText.text = "Lives: " + health;
         _animator.Play("death animation");
         yield return new WaitForSeconds(1.75f);
         transform.position = new Vector3(0, -5.5f, -1);
@@ -185,7 +182,6 @@ public class MovementController : MonoBehaviour
     private IEnumerator FullyDie()
     {
         health--;
-        healthText.text = "Lives: " + health;
         dying = true;
         _animator.Play("death animation");
         yield return new WaitForSeconds(1.75f);
