@@ -9,10 +9,13 @@ public class CrabEnemie : MonoBehaviour
     public Transform fallCheck;
     
     private Rigidbody2D _rigidbody2D;
+    private Animator _animator;
 
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
+        _animator.Play("Crab Walk");
     }
     
     private void FixedUpdate()

@@ -22,10 +22,6 @@ public class MovementController : MonoBehaviour
     public Vector2 groundBoxSize = new Vector2(0.8f, 0.2f);
     public TextMeshProUGUI healthText;
 
-    public GameObject gameOverText;
-    public GameObject restartButton;
-    public GameObject ReMainMenu;
-
     public GameObject heldObject;
     public Transform holdPosition;
 
@@ -40,9 +36,6 @@ public class MovementController : MonoBehaviour
         _animator = GetComponent<Animator>();
         health = 3;
         healthText.text = "Lives: " + health;
-        gameOverText.SetActive(false);
-        restartButton.SetActive(false);
-        ReMainMenu.SetActive(false);
         dying = false;
     }
 
@@ -95,6 +88,7 @@ public class MovementController : MonoBehaviour
         if (health <= 0)
         {
             StartCoroutine(FullyDie());
+            SceneManager.LoadScene("GameOver");
         }
 
         UpdateAnimation();
@@ -197,10 +191,8 @@ public class MovementController : MonoBehaviour
         yield return new WaitForSeconds(1.75f);
         Destroy(gameObject);
         transform.position = new Vector3(0, -5.5f, -1);
-        gameOverText.SetActive(true);
-        restartButton.SetActive(true);
-        ReMainMenu.SetActive(true);
         dying = false;
+        SceneManager.LoadScene("GameOver");
     }
 
     private void OnDrawGizmosSelected()
