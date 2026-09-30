@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2081803492101991278}
   m_Layer: 0
   m_Name: PistolShrimp
-  m_TagString: Enemie
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

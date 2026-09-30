@@ -23,7 +23,13 @@ public class PistolEnemie : MonoBehaviour
         }
         else
         {
-            Instantiate(bullet, bulletSpawn.position, Quaternion.identity);
+           var clone = Instantiate(bullet, bulletSpawn.position, Quaternion.identity);
+           
+           clone.TryGetComponent(out Rigidbody2D rb);
+           
+           rb.linearVelocity = new Vector2(1f*transform.localScale.x, 0f) *5f;
+           Destroy(clone, 2f);
+           
             timer = maxWaittime;
         }
         
