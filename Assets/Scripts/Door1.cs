@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class Door : MonoBehaviour
+public class Door1 : MonoBehaviour
 {
     private Rigidbody2D _rigidbody2D;
     
@@ -16,10 +16,7 @@ public class Door : MonoBehaviour
         if (other.gameObject.tag == "Key")
         {
             Destroy(other.gameObject);
-            if (transform.position.x <= -0.1)
-                _rigidbody2D.linearVelocityX = moveSpeed * -1;
-            else
-                _rigidbody2D.linearVelocityX = moveSpeed;
+            _rigidbody2D.linearVelocityX = moveSpeed * -1;
         }
     }
     

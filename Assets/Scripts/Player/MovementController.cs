@@ -70,6 +70,8 @@ public class MovementController : MonoBehaviour
             // Throw Object
             heldObject.TryGetComponent(out Rigidbody2D rb);
             rb.constraints = 0;
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+                
             rb.bodyType = RigidbodyType2D.Dynamic;
             heldObject.transform.parent = null;
             rb.linearVelocityY = throwSpeed * 1.8f;
@@ -128,6 +130,11 @@ public class MovementController : MonoBehaviour
         if (other.transform.CompareTag("Enemy") && dying == false)
         {
             StartCoroutine(Die());
+        }
+
+        if (other.transform.CompareTag("NextScene"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 
