@@ -32,7 +32,7 @@ public class Macguffinit : MonoBehaviour
 		if (other.transform.CompareTag("BouncePad"))
 		{
 			print("bounced");
-			_rigidbody2D.linearVelocityY = jumpSpeed * 1.8f;
+			_rigidbody2D.linearVelocityY = jumpSpeed * 2f;
 		}
 		
 		

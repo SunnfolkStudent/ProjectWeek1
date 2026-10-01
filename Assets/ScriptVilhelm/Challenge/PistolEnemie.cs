@@ -28,7 +28,7 @@ public class PistolEnemie : MonoBehaviour
            clone.TryGetComponent(out Rigidbody2D rb);
            
            rb.linearVelocity = new Vector2(1f*transform.localScale.x, 0f) *5f;
-           Destroy(clone, 2f);
+           Destroy(clone, 5f);
            
             timer = maxWaittime;
         }
