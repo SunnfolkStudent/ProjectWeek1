@@ -2,7 +2,17 @@ fileFormatVersion: 2
 guid: 4cf35cee7a99230489765f1ebd568448
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: bounce
+    second: {fileID: 7400000, guid: 0fc43395c21099647995605c6598ec67, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: idle
+    second: {fileID: 7400000, guid: dfcd819d01205e24eacaa1c03dec1b00, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -103,7 +113,7 @@ ScriptedImporter:
     addShadowCasters: 0
     generateIndividualEvents: 1
     generateSpriteAtlas: 1
-  platformSettingsDirtyTick: 639262907332074145
+  platformSettingsDirtyTick: 639264621702917431
   singleSpriteImportData:
   - name: 
     originalName: 
