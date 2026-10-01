@@ -123,6 +123,11 @@ public class MovementController : MonoBehaviour
     {
         if (other.transform.CompareTag("BouncePad"))
         {
+            _rigidbody2D.linearVelocityY = jumpSpeed * 1.4f;
+        }
+        
+        if (other.transform.CompareTag("MegaPad"))
+        {
             _rigidbody2D.linearVelocityY = jumpSpeed * 1.8f;
         }
 
