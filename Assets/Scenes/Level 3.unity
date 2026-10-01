@@ -672,7 +672,7 @@ Transform:
   m_GameObject: {fileID: 479559305}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.27, y: 6.46, z: -12}
+  m_LocalPosition: {x: -2.59, y: 21.67, z: -12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -855,11 +855,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7085689312667897157, guid: 4b1a2dcbfee7b4d49a4c1a9bf065e381, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.27
+      value: -2.59
       objectReference: {fileID: 0}
     - target: {fileID: 7085689312667897157, guid: 4b1a2dcbfee7b4d49a4c1a9bf065e381, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.46
+      value: 21.67
       objectReference: {fileID: 0}
     - target: {fileID: 7085689312667897157, guid: 4b1a2dcbfee7b4d49a4c1a9bf065e381, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1217,7 +1217,7 @@ Transform:
   m_GameObject: {fileID: 650709764}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.27, y: 6.46, z: -12}
+  m_LocalPosition: {x: -2.59, y: 21.67, z: -12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7007,6 +7007,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pad (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2883124609215636855, guid: 9f9d66273126ef74981e527e0c82501d, type: 3}
+      propertyPath: m_TagString
+      value: MegaPad
+      objectReference: {fileID: 0}
     - target: {fileID: 5584983821257167906, guid: 9f9d66273126ef74981e527e0c82501d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.08
@@ -7161,6 +7165,10 @@ PrefabInstance:
     - target: {fileID: 2883124609215636855, guid: 9f9d66273126ef74981e527e0c82501d, type: 3}
       propertyPath: m_Name
       value: Pad (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883124609215636855, guid: 9f9d66273126ef74981e527e0c82501d, type: 3}
+      propertyPath: m_TagString
+      value: MegaPad
       objectReference: {fileID: 0}
     - target: {fileID: 5584983821257167906, guid: 9f9d66273126ef74981e527e0c82501d, type: 3}
       propertyPath: m_LocalPosition.x
