@@ -1,8 +1,11 @@
 using System;
+using TMPro;
 using UnityEngine;
 
 public class PistolEnemie : MonoBehaviour
 {
+    private Animator _animator;
+    
     public GameObject bullet;
     public Transform bulletSpawn;
 
@@ -12,27 +15,24 @@ public class PistolEnemie : MonoBehaviour
     void Start()
     {
         timer = maxWaittime;
+        _animator = GetComponent<Animator>();
     }
     
     
     void Update()
     {
-        if (timer > 0)
-        {
-            timer -= 1 * Time.deltaTime;
-        }
-        else
-        {
-           var clone = Instantiate(bullet, bulletSpawn.position, Quaternion.identity);
-           
-           clone.TryGetComponent(out Rigidbody2D rb);
-           
-           rb.linearVelocity = new Vector2(1f*transform.localScale.x, 0f) *5f;
-           Destroy(clone, 5f);
-           
-            timer = maxWaittime;
-        }
         
-        
+    }
+
+    public void shoot()
+    {
+        var clone = Instantiate(bullet, bulletSpawn.position, Quaternion.identity);
+           
+        clone.TryGetComponent(out Rigidbody2D rb);
+           
+        rb.linearVelocity = new Vector2(1f*transform.localScale.x, 0f) *5f;
+        Destroy(clone, 2f);
+           
+        timer = maxWaittime;
     }
 }
