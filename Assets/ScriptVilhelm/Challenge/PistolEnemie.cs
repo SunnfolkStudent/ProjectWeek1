@@ -8,10 +8,14 @@ public class PistolEnemie : MonoBehaviour
 
     public float timer;
     public float maxWaittime = 2f;
+    
+    private AudioSource _audioSource;
+    public AudioClip sound;
 
     void Start()
     {
         timer = maxWaittime;
+        _audioSource = GetComponent<AudioSource>();
     }
     
     
@@ -23,6 +27,7 @@ public class PistolEnemie : MonoBehaviour
         }
         else
         {
+            _audioSource.PlayOneShot(sound);
            var clone = Instantiate(bullet, bulletSpawn.position, Quaternion.identity);
            
            clone.TryGetComponent(out Rigidbody2D rb);
