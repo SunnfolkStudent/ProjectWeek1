@@ -7,31 +7,32 @@ public class RayEnemie : MonoBehaviour
 {
     public GameObject bullet;
     public Transform bulletSpawn;
+    public AudioClip sound;
 
     public float timer;
     public float maxWaittime = 4f;
     
     private Animator _animator;
+    private  AudioSource _audioSource;
 
     void Start()
     {
         timer = maxWaittime;
         _animator = GetComponent<Animator>();
+        _audioSource = GetComponent<AudioSource>();
         _animator.StopPlayback();
     }
     
     
     void Update()
     {
-        if (timer > 0)
-        { 
-            timer -= Time.deltaTime;
-        }
-        else
-        {
-            Instantiate(bullet, bulletSpawn.position, Quaternion.identity);
-            timer = 3f;
-        }
+
+    }
+
+    private void Shoot()
+    {
+        Instantiate(bullet, bulletSpawn.position, Quaternion.identity);
+        _audioSource.PlayOneShot(sound);
     }
     
 }

@@ -20,7 +20,7 @@ public class JellyMation : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            _animator.SetTrigger("bounce");
+            _animator.Play("bounce");
             _audioSource.PlayOneShot(sound);
         }
     }

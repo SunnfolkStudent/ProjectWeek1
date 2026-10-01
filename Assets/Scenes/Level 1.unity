@@ -782,7 +782,7 @@ PrefabInstance:
     - target: {fileID: 6501787307318788565, guid: 4b1a2dcbfee7b4d49a4c1a9bf065e381, type: 3}
       propertyPath: deathSound
       value: 
-      objectReference: {fileID: 8300000, guid: 85f09ed0b656f3249b82e9442ab97e19, type: 3}
+      objectReference: {fileID: 8300000, guid: 0ca8dd384b9a62245bc019e6f88561bb, type: 3}
     - target: {fileID: 6501787307318788565, guid: 4b1a2dcbfee7b4d49a4c1a9bf065e381, type: 3}
       propertyPath: healthText
       value: 
@@ -834,7 +834,7 @@ PrefabInstance:
     - target: {fileID: 6501787307318788565, guid: 4b1a2dcbfee7b4d49a4c1a9bf065e381, type: 3}
       propertyPath: 'jumpSounds.Array.data[0]'
       value: 
-      objectReference: {fileID: 8300000, guid: 052c9e06e1ecb5247b6bbafa1d0cc77d, type: 3}
+      objectReference: {fileID: 8300000, guid: 9960ce6ecc30c6648a9d74e3fd1a1e64, type: 3}
     - target: {fileID: 6501787307318788565, guid: 4b1a2dcbfee7b4d49a4c1a9bf065e381, type: 3}
       propertyPath: 'moveSounds.Array.data[0]'
       value: 
@@ -1863,7 +1863,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.75
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
