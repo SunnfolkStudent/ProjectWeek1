@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class RayEnemie : MonoBehaviour
 {
@@ -15,31 +16,22 @@ public class RayEnemie : MonoBehaviour
     void Start()
     {
         timer = maxWaittime;
+        _animator = GetComponent<Animator>();
+        _animator.StopPlayback();
     }
     
     
     void Update()
     {
         if (timer > 0)
-        {
-            timer -= 1 * Time.deltaTime;
+        { 
+            timer -= Time.deltaTime;
         }
         else
         {
-            SpawnBullet();
+            Instantiate(bullet, bulletSpawn.position, Quaternion.identity);
+            timer = 3f;
         }
-        
-        
     }
-
-    private IEnumerator SpawnBullet()
-    {
-        _animator.Play("Shrimp fire big");
-        yield return new WaitForSeconds(0.2f);
-        _animator.Play("BeamChargeUp");
-        yield return new WaitForSeconds(0.1f);
-        Instantiate(bullet, bulletSpawn.position, Quaternion.identity);
-        _animator.Play("BEAAMM");
-        timer = maxWaittime;
-    }
+    
 }

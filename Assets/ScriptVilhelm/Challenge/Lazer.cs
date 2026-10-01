@@ -9,14 +9,7 @@ public class Lazer : MonoBehaviour
     void Start()
     {
         Destroy(gameObject, despawnTime);
-        _rigidbody2D.linearVelocity = new Vector2(1f, 0f);
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Destroy(collision.gameObject);
-    }
-    
 }
 
     
