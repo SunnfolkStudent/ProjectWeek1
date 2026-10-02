@@ -11,10 +11,13 @@ public class Macguffinit : MonoBehaviour
 	public Transform groundCheck;
 	public LayerMask whatIsGround;
 	public Vector2 groundBoxSize = new Vector2(0.8f, 0.2f);
+
+	public Vector2 startingPoint;
 	
 	void Start()
 	{
 		_rigidbody2D = GetComponent<Rigidbody2D>();
+		startingPoint = transform.position;
 	}
 
 	private void Update()
@@ -33,6 +36,10 @@ public class Macguffinit : MonoBehaviour
 		{
 			print("bounced");
 			_rigidbody2D.linearVelocityY = jumpSpeed * 2f;
+		}
+		if (other.transform.CompareTag("MegaPad"))
+		{
+			_rigidbody2D.linearVelocityY = jumpSpeed * 1.2f;
 		}
 		
 		

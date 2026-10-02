@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3015466646820093670}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WallCheckF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 409167374660061636}
   - component: {fileID: 4592322031903094787}
   - component: {fileID: 6320255211219758110}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Swim
   m_TagString: Enemy
   m_Icon: {fileID: 0}

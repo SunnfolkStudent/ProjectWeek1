@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2081803492101991278}
   - component: {fileID: 3793843819278579756}
   - component: {fileID: 6250573918108623570}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PistolShrimp
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -316,7 +316,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7019837747735010597}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BulletSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -7219583670211161997}
   - component: {fileID: 2213311828560350918}
   m_Layer: 8
-  m_Name: Bullet L
+  m_Name: Bullet Slow
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,7 +87,7 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_Sprite: {fileID: 3379236713133540278, guid: 2fb70b9cd140aeb49945c372394a9582, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}

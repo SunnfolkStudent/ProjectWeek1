@@ -26,6 +26,8 @@ public class MovementController : MonoBehaviour
     public GameObject heldObject;
     public Transform holdPosition;
 
+    private Transform macGuffin;
+
     public float throwSpeed;
     
     public AudioClip[] jumpSounds;
@@ -56,6 +58,7 @@ public class MovementController : MonoBehaviour
                 rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
                 
                 heldObject = hitInfo.gameObject;
+                macGuffin = heldObject.transform;
                 
                 heldObject.transform.position = holdPosition.position;
                 heldObject.transform.parent = transform;
@@ -148,6 +151,7 @@ public class MovementController : MonoBehaviour
         {
             StartCoroutine(Die());
         }
+        
         if (other.transform.CompareTag("Enemy") && dying == false)
         {
             StartCoroutine(Die());
@@ -197,6 +201,26 @@ public class MovementController : MonoBehaviour
         _animator.Play("death animation");
         yield return new WaitForSeconds(1.75f);
         transform.position = new Vector3(0, -5.5f, -1);
+
+        if (macGuffin != null)
+        {
+            macGuffin.TryGetComponent(out Macguffinit guffin);
+            macGuffin.position = guffin.startingPoint;
+        }
+
+        if (heldObject != null)
+        {
+            heldObject.TryGetComponent(out Rigidbody2D rb);
+            rb.constraints = 0;
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+                
+            rb.bodyType = RigidbodyType2D.Dynamic;
+            
+            heldObject.transform.parent = null;
+            heldObject = null;
+        }
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
         dying = false;
     }
     private IEnumerator FullyDie()

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -7219583670211161997}
   - component: {fileID: 2213311828560350918}
   m_Layer: 8
-  m_Name: Bullet L
+  m_Name: Bullet L Slow
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
   speed: 5
-  despawnTime: 5
+  despawnTime: 2.3
   _rigidbody2D: {fileID: -8005490761534907175}
 --- !u!50 &-8005490761534907175
 Rigidbody2D:

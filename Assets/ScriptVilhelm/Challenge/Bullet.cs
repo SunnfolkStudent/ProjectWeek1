@@ -12,10 +12,13 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject, despawnTime);
         //_rigidbody2D.linearVelocity = new Vector2(1f, 0f) * speed;
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         Destroy(gameObject);
+        print(collision.gameObject.name);
     }
+    
+    
     
 }

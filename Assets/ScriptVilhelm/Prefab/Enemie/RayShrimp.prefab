@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1836752046667463861}
   - component: {fileID: 7418270180481904702}
   - component: {fileID: 1027520462086527475}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RayShrimp
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -316,7 +316,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7239760398732583895}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BulletSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
