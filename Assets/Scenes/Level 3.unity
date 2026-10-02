@@ -172,6 +172,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2081803492101991278, guid: 60eb30d9d0203eb49ad74da5affcceec, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 6560895949356151201, guid: 7a92d57e0c8102a4795d576ee20d688b, type: 3}
+    - target: {fileID: 2081803492101991278, guid: 60eb30d9d0203eb49ad74da5affcceec, type: 3}
       propertyPath: maxWaittime
       value: 2.5
       objectReference: {fileID: 0}
@@ -1127,6 +1131,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2081803492101991278, guid: 60eb30d9d0203eb49ad74da5affcceec, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 6560895949356151201, guid: 7a92d57e0c8102a4795d576ee20d688b, type: 3}
+    - target: {fileID: 2081803492101991278, guid: 60eb30d9d0203eb49ad74da5affcceec, type: 3}
       propertyPath: maxWaittime
       value: 2.5
       objectReference: {fileID: 0}
@@ -2053,13 +2061,13 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1
-    height: 1
+    width: 1.7777778
+    height: 2.6666667
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.625
+  orthographic size: 7.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3133,6 +3141,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2081803492101991278, guid: 60eb30d9d0203eb49ad74da5affcceec, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 6560895949356151201, guid: 7a92d57e0c8102a4795d576ee20d688b, type: 3}
+    - target: {fileID: 2081803492101991278, guid: 60eb30d9d0203eb49ad74da5affcceec, type: 3}
       propertyPath: maxWaittime
       value: 2.5
       objectReference: {fileID: 0}
@@ -3363,7 +3375,7 @@ PrefabInstance:
     - target: {fileID: 2081803492101991278, guid: 60eb30d9d0203eb49ad74da5affcceec, type: 3}
       propertyPath: bullet
       value: 
-      objectReference: {fileID: 6560895949356151201, guid: 0d82a590716f0a34e98cb4985fba5c27, type: 3}
+      objectReference: {fileID: 6560895949356151201, guid: 80ad5a055f775374fac639b7237d7519, type: 3}
     - target: {fileID: 2081803492101991278, guid: 60eb30d9d0203eb49ad74da5affcceec, type: 3}
       propertyPath: maxWaittime
       value: 3
@@ -5251,6 +5263,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2081803492101991278, guid: 60eb30d9d0203eb49ad74da5affcceec, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 6560895949356151201, guid: 7a92d57e0c8102a4795d576ee20d688b, type: 3}
     - target: {fileID: 2081803492101991278, guid: 60eb30d9d0203eb49ad74da5affcceec, type: 3}
       propertyPath: maxWaittime
       value: 2.8
@@ -7792,7 +7808,7 @@ PrefabInstance:
     - target: {fileID: 2081803492101991278, guid: 60eb30d9d0203eb49ad74da5affcceec, type: 3}
       propertyPath: bullet
       value: 
-      objectReference: {fileID: 6560895949356151201, guid: 0d82a590716f0a34e98cb4985fba5c27, type: 3}
+      objectReference: {fileID: 6560895949356151201, guid: 80ad5a055f775374fac639b7237d7519, type: 3}
     - target: {fileID: 2081803492101991278, guid: 60eb30d9d0203eb49ad74da5affcceec, type: 3}
       propertyPath: maxWaittime
       value: 3
