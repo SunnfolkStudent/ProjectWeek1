@@ -295,6 +295,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8148623823620942299, guid: 2fc205d8677cc5149934bcb6c9bff88e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6112360560495887318, guid: 2fc205d8677cc5149934bcb6c9bff88e, type: 3}
     m_RemovedGameObjects: []
@@ -2808,6 +2812,8 @@ GameObject:
   - component: {fileID: 1544580716}
   - component: {fileID: 1544580715}
   - component: {fileID: 1544580717}
+  - component: {fileID: 1544580719}
+  - component: {fileID: 1544580718}
   m_Layer: 6
   m_Name: Tilemap
   m_TagString: Untagged
@@ -4090,12 +4096,350 @@ TilemapCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_CompositeOperation: 0
+  m_CompositeOperation: 1
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!66 &1544580718
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544580713}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 1
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 1544580717}
+    m_ColliderPaths:
+    - - X: -159999984
+        Y: 160000016
+      - X: -169999984
+        Y: 160000032
+      - X: -169999984
+        Y: 160000016
+      - X: -179999984
+        Y: 160000032
+      - X: -179999984
+        Y: 160000016
+      - X: -189999984
+        Y: 160000032
+      - X: -239999984
+        Y: 160000032
+      - X: -249999984
+        Y: 160000064
+      - X: -249999984
+        Y: 160000032
+      - X: -259999984
+        Y: 160000064
+      - X: -259999984
+        Y: 160000032
+      - X: -269999968
+        Y: 160000064
+      - X: -269999968
+        Y: 160000032
+      - X: -279999968
+        Y: 160000064
+      - X: -279999968
+        Y: 160000032
+      - X: -289999968
+        Y: 160000064
+      - X: -349999968
+        Y: 160000064
+      - X: -359999968
+        Y: 160000080
+      - X: -359999968
+        Y: 160000064
+      - X: -369999968
+        Y: 160000080
+      - X: -369999968
+        Y: 160000064
+      - X: -379999968
+        Y: 160000080
+      - X: -379999968
+        Y: 160000064
+      - X: -389999968
+        Y: 160000080
+      - X: -389999968
+        Y: 160000064
+      - X: -399999968
+        Y: 160000080
+      - X: -449999968
+        Y: 160000080
+      - X: -459999968
+        Y: 160000096
+      - X: -459999968
+        Y: 160000080
+      - X: -469999968
+        Y: 160000096
+      - X: -469999968
+        Y: 160000080
+      - X: -479999968
+        Y: 160000096
+      - X: -479999968
+        Y: 150000080
+      - X: -399999968
+        Y: 150000080
+      - X: -399999968
+        Y: 150000064
+      - X: -289999968
+        Y: 150000064
+      - X: -289999968
+        Y: 150000048
+      - X: -239999984
+        Y: 150000048
+      - X: -239999984
+        Y: 150000032
+      - X: -159999984
+        Y: 150000032
+    - - X: 20000028
+        Y: 160000000
+      - X: -29999972
+        Y: 160000000
+      - X: -39999972
+        Y: 160000016
+      - X: -39999972
+        Y: 160000000
+      - X: -49999972
+        Y: 160000016
+      - X: -49999972
+        Y: 160000000
+      - X: -59999972
+        Y: 160000016
+      - X: -59999972
+        Y: 160000000
+      - X: -69999968
+        Y: 160000016
+      - X: -69999968
+        Y: 160000000
+      - X: -79999968
+        Y: 160000016
+      - X: -129999968
+        Y: 160000016
+      - X: -139999968
+        Y: 160000032
+      - X: -139999968
+        Y: 160000016
+      - X: -149999968
+        Y: 160000032
+      - X: -149999968
+        Y: 160000016
+      - X: -159999968
+        Y: 160000032
+      - X: -159999968
+        Y: 150000032
+      - X: -129999968
+        Y: 150000032
+      - X: -129999968
+        Y: 150000016
+      - X: -29999972
+        Y: 150000016
+      - X: -29999972
+        Y: 150000000
+      - X: 20000026
+        Y: 150000000
+    - - X: 60000028
+        Y: 159999984
+      - X: 30000028
+        Y: 159999984
+      - X: 30000028
+        Y: 160000000
+      - X: 20000028
+        Y: 160000000
+      - X: 20000028
+        Y: 150000000
+      - X: 30000028
+        Y: 150000000
+      - X: 30000028
+        Y: 149999984
+      - X: 60000028
+        Y: 149999984
+    - - X: -320000032
+        Y: -149999936
+      - X: -400000032
+        Y: -149999936
+      - X: -400000032
+        Y: -149999920
+      - X: -480000032
+        Y: -149999920
+      - X: -480000032
+        Y: -159999920
+      - X: -400000032
+        Y: -159999920
+      - X: -400000032
+        Y: -159999936
+      - X: -320000032
+        Y: -159999936
+    - - X: -20000028
+        Y: -150000000
+      - X: -30000028
+        Y: -150000000
+      - X: -30000028
+        Y: -149999984
+      - X: -130000032
+        Y: -149999984
+      - X: -130000032
+        Y: -149999968
+      - X: -240000016
+        Y: -149999968
+      - X: -240000016
+        Y: -149999952
+      - X: -290000032
+        Y: -149999952
+      - X: -290000032
+        Y: -149999936
+      - X: -320000000
+        Y: -149999936
+      - X: -320000032
+        Y: -159999936
+      - X: -290000032
+        Y: -159999936
+      - X: -290000032
+        Y: -159999952
+      - X: -240000016
+        Y: -159999952
+      - X: -240000016
+        Y: -159999968
+      - X: -130000032
+        Y: -159999968
+      - X: -130000032
+        Y: -159999984
+      - X: -30000028
+        Y: -159999984
+      - X: -30000028
+        Y: -160000000
+      - X: -20000028
+        Y: -160000000
+    - - X: 59999972
+        Y: -150000016
+      - X: 29999972
+        Y: -150000016
+      - X: 29999972
+        Y: -150000000
+      - X: -20000026
+        Y: -150000000
+      - X: -20000028
+        Y: -160000000
+      - X: 29999972
+        Y: -160000000
+      - X: 39999972
+        Y: -160000016
+      - X: 39999972
+        Y: -160000000
+      - X: 49999972
+        Y: -160000016
+      - X: 49999972
+        Y: -160000000
+      - X: 59999972
+        Y: -160000016
+    - - X: -180122464
+        Y: -684879380480
+      - X: -180122464
+        Y: -684870598656
+      - X: -180747472
+        Y: -684870008832
+      - X: -190122464
+        Y: -684870008832
+      - X: -190122464
+        Y: -684879970304
+      - X: -180747472
+        Y: -684879970304
+    - - X: -180129616
+        Y: -724879343616
+      - X: -180129616
+        Y: -724870627328
+      - X: -180754624
+        Y: -724869971968
+      - X: -190129616
+        Y: -724869971968
+      - X: -190129616
+        Y: -724879998976
+      - X: -180754624
+        Y: -724879998976
+  m_CompositePaths:
+    m_Paths:
+    - - {x: 5.999974, y: 14.999999}
+      - {x: 5.999974, y: 15.999999}
+      - {x: -47.999996, y: 15.999981}
+      - {x: -47.99997, y: 15.000009}
+    - - {x: 5.999968, y: -16.000002}
+      - {x: 5.999968, y: -15.000002}
+      - {x: -48.000004, y: -15.000021}
+      - {x: -47.999973, y: -15.999992}
+    - - {x: -18.074757, y: -68488}
+      - {x: -18.012247, y: -68487.94}
+      - {x: -18.012255, y: -68487.06}
+      - {x: -18.074757, y: -68487}
+      - {x: -19.012247, y: -68487}
+      - {x: -19.012218, y: -68488}
+    - - {x: -18.075474, y: -72488}
+      - {x: -18.012962, y: -72487.94}
+      - {x: -18.01297, y: -72487.06}
+      - {x: -18.075474, y: -72487}
+      - {x: -19.012962, y: -72487}
+      - {x: -19.012934, y: -72488}
+  m_VertexDistance: 0.0005
+  m_OffsetDistance: 0.00005
+  m_UseDelaunayMesh: 0
+  m_CompositeGameObject: {fileID: 1544580713}
+--- !u!50 &1544580719
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544580713}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!4 &1631900085 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6416768657427358836, guid: f32b9429af92c4049995c5ccf4c8ef70, type: 3}
@@ -4227,7 +4571,7 @@ TilemapRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}

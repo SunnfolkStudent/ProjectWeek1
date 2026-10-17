@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 5290432835022125892}
   - component: {fileID: 6501787307318788565}
   - component: {fileID: 4268689240410646087}
-  - component: {fileID: 8341697479287400251}
   - component: {fileID: 7131256962059468822}
+  - component: {fileID: 4539652815663551758}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -152,7 +152,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 084788c9bc706cf43b66813939db7657, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -196,7 +196,7 @@ MonoBehaviour:
   moveSounds:
   - {fileID: 8300000, guid: 8293b0662877755499c61d72e1da0a31, type: 3}
   - {fileID: 8300000, guid: c7364f0afcb4dce4ab5b48745f76c116, type: 3}
-  deathSound: {fileID: 8300000, guid: 85f09ed0b656f3249b82e9442ab97e19, type: 3}
+  deathSound: {fileID: 8300000, guid: 0ca8dd384b9a62245bc019e6f88561bb, type: 3}
 --- !u!114 &4268689240410646087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,28 +212,6 @@ MonoBehaviour:
   Horizontal: 0
   Vertical: 0
   Jump: 0
---- !u!95 &8341697479287400251
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2573457609954192468}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5f6f27e678d09d34ab1e51154a88ab70, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!82 &7131256962059468822
 AudioSource:
   m_ObjectHideFlags: 0
@@ -331,6 +309,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &4539652815663551758
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2573457609954192468}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f6f27e678d09d34ab1e51154a88ab70, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3385711528257352879
 GameObject:
   m_ObjectHideFlags: 0
