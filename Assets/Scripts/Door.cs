@@ -23,6 +23,11 @@ public class Door : MonoBehaviour
             else
                 _rigidbody2D.linearVelocityX = moveSpeed;
         }
+
+        if (other.gameObject.tag == "Player")
+        {
+            //_rigidbody2D = null;
+        }
     }
     
 }
