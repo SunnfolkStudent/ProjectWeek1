@@ -2301,14 +2301,14 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0
+    y: 0.0022799817
     width: 1
-    height: 1
+    height: 0.994072
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6.75
+  orthographic size: 6.8125
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3967,7 +3967,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.022967339, y: 14}
+  m_Offset: {x: 0, y: 14}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3977,7 +3977,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 31.526556, y: 40}
+  m_Size: {x: 30, y: 40}
   m_EdgeRadius: 0
 --- !u!4 &1488982435
 Transform:
