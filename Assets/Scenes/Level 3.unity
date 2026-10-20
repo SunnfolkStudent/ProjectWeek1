@@ -2301,14 +2301,14 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.0022799817
+    y: 0
     width: 1
-    height: 0.994072
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6.8125
+  orthographic size: 6.75
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3977,7 +3977,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 30, y: 40}
+  m_Size: {x: 27, y: 40}
   m_EdgeRadius: 0
 --- !u!4 &1488982435
 Transform:
